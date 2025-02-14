@@ -61,7 +61,7 @@ const BooksGrid = () => {
   const { data: metadataBooks } = useSearchByMetadataQuery(
     { author: query, year: 0, genre: "" },
     {
-      skip: effectiveType !== "metadata" || !query.trim(),
+      skip: effectiveType !== "author" || !query.trim(),
       refetchOnMountOrArgChange: true,
     }
   );
@@ -88,7 +88,7 @@ const BooksGrid = () => {
       case "similaire":
         booksToDisplay = fuzzyBooks;
         break;
-      case "metadata":
+      case "author":
         booksToDisplay = metadataBooks;
         break;
      

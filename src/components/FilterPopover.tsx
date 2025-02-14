@@ -82,7 +82,7 @@ const FilterPopover = ({
           component="button"
           sx={{ width: "100%" }}
           onClick={() => {
-            typeHandler("metadata");
+            typeHandler("author");
             onClose();
           }}
         >
